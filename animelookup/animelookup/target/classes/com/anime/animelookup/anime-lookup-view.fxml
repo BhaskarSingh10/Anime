@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.anime.animelookup.AnimeController" spacing="24.0" styleClass="parent">
+    <GridPane alignment="CENTER">
+        <Label text="Kitsu DB" styleClass="centerLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="CENTER" />
+    </GridPane>
+    <GridPane hgap="16.0">
+        <Label text="Anime Title:" GridPane.columnIndex="0" styleClass="animeTitleLabel" />
+        <TextField promptText="Type anime title" GridPane.columnIndex="1" fx:id="animeLookupSearchField" />
+        <Button text="Search Anime" GridPane.columnIndex="2" onAction="#lookupAnime" styleClass="backToAnimeLookup" />
+    </GridPane>
+    <GridPane hgap="10.0">
+        <ListView prefHeight="300.0" prefWidth="365.0" GridPane.columnIndex="0" fx:id="animeLookupResults" styleClass="animeLookupResults" />
+        <Label text="Click on an anime to view its details" fx:id="animeDetail" styleClass="animeDetail" GridPane.columnIndex="2" wrapText="true" visible="false" />
+    </GridPane>
+    <Label text="Anime found: 0" fx:id="animeFound" styleClass="animeFound" />
+    <padding>
+        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0"/>
+    </padding>
+</VBox>

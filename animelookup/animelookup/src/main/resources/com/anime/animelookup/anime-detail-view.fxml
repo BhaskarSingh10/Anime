@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.anime.animelookup.AnimeDetailController" spacing="24.0" styleClass="parent">
+    <GridPane alignment="CENTER">
+        <Label fx:id="centerLabel" styleClass="centerLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="CENTER" wrapText="true" textAlignment="CENTER"/>
+    </GridPane>
+    <GridPane hgap="24.0">
+        <VBox GridPane.columnIndex="0" spacing="10.0" prefWidth="350">
+            <GridPane vgap="5.0">
+                <Label text="Rating" styleClass="animeDetailLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label styleClass="animeDetailInfo" fx:id="rating" GridPane.columnIndex="0"  GridPane.rowIndex="1"  />
+            </GridPane>
+            <GridPane vgap="5.0">
+                <Label text="Age Rating" styleClass="animeDetailLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label styleClass="animeDetailInfo" fx:id="ageRating" GridPane.columnIndex="0" GridPane.rowIndex="1"  />
+            </GridPane>
+            <GridPane vgap="5.0">
+                <Label text="Episode Count" styleClass="animeDetailLabel" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <Label styleClass="animeDetailInfo" fx:id="episodeCount" GridPane.columnIndex="0" GridPane.rowIndex="1"  />
+            </GridPane>
+            <GridPane vgap="5.0">
+                <Label text="Show Type" styleClass="animeDetailLabel" GridPane.columnIndex="0"  GridPane.rowIndex="0"  />
+                <Label styleClass="animeDetailInfo" fx:id="showType" GridPane.columnIndex="0" GridPane.rowIndex="1"  />
+            </GridPane>
+            <GridPane vgap="5.0">
+                <Label text="NSFW" styleClass="animeDetailLabel" GridPane.columnIndex="0"  GridPane.rowIndex="0"  />
+                <Label styleClass="animeDetailInfo" fx:id="nsfw" GridPane.columnIndex="0"  GridPane.rowIndex="1"  />
+            </GridPane>
+            <GridPane vgap="5.0">
+                <Label text="Description" styleClass="animeDetailLabel" GridPane.columnIndex="0" wrapText="true"  GridPane.rowIndex="0"  />
+                <Label styleClass="animeDetailInfo" fx:id="description" GridPane.columnIndex="0"  wrapText="true"  GridPane.rowIndex="1"  />
+            </GridPane>
+        </VBox>
+        <ImageView fx:id="animeCoverImage" GridPane.columnIndex="1" fitWidth="250.0" fitHeight="250.0" preserveRatio="true" />
+    </GridPane>
+    <GridPane alignment="BOTTOM_CENTER">
+        <Button GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.halignment="CENTER" styleClass="backToAnimeLookup" fx:id="backToAnimeLookup">
+            Back
+        </Button>
+    </GridPane>
+    <padding>
+        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0"/>
+    </padding>
+</VBox>
